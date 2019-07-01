@@ -1,0 +1,22 @@
+<mat-card style ="text-align: center">
+<h2> Add new task:</h2>
+<mat-form-field>
+<input matInput placeholder="Task Description"[(ngModel)]="newDesc"/>
+</mat-form-field><br>
+
+<mat-form-field>
+  <select matNativeControl [(ngModel)]="newPrior">
+    <option value="low">Low </option>
+    <option value="medium">medium</option>
+    <option value="high">high</option>
+  </select>
+</mat-form-field> <br>
+
+<mat-form-field>
+  <input matInput type ="date"[(ngModel)]="newDate"/>
+
+</mat-form-field>
+<button mat-raised button color ="primary"(click) ="AddTask(newDesc, newPrior,newDate)">ADD</button>
+</mat-card>
+
+

@@ -1,0 +1,12 @@
+
+<mat-card>
+<p *ngFor="let task of taskss">
+
+    {{task.taskDesc}}
+    {{task.taskPrior}}
+    {{task.taskdate}}
+
+    <button mat-raised-button color="primary" (click) ="deleteTask(task)">Delete</button>
+    <button mat-raised-button color="primary" (click) ="editTask(task)">Edit</button>
+</p> 
+</mat-card>
